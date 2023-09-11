@@ -1,7 +1,4 @@
 # Simplest_Gan.ipynb
-
-# Code Specification
-
 ## Objective
 
 The code is designed to implement the generator part of a Generative Adversarial Network (GAN). The primary goal is to generate synthetic data samples that resemble a target distribution, with a focus on generating MNIST-like images.
