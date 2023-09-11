@@ -8,6 +8,34 @@ The code is designed to implement the generator part of a Generative Adversarial
 - **Input:** The generator takes a random noise vector of size 100 as input.
 - **Output:** The output of the generator has the same dimensionality as MNIST images, which is 28x28 pixels.
 
+# Generator and Discriminator Architectures
+
+### Model Architecture
+
+The Generator consists of multiple fully connected (linear) layers, followed by LeakyReLU activations and a final Tanh activation.
+
+- Linear Layer 1: Input size 100, output size 256 with LeakyReLU activation.
+- Linear Layer 2: Input size 256, output size 512 with LeakyReLU activation.
+- Linear Layer 3: Input size 512, output size 1024 with LeakyReLU activation.
+- Linear Layer 4: Input size 1024, output size 784 with Tanh activation.
+
+## Discriminator Architecture
+
+The Discriminator is designed to distinguish between real and generated data samples in GANs.
+
+- Input: The discriminator takes an input of dimension 784, representing an image.
+
+### Model Architecture
+
+The Discriminator consists of multiple fully connected (linear) layers, followed by LeakyReLU activations and a final Sigmoid activation.
+
+- Linear Layer 1: Input size 784, output size 1024 with LeakyReLU activation.
+- Linear Layer 2: Input size 1024, output size 512 with LeakyReLU activation.
+- Linear Layer 3: Input size 512, output size 256 with LeakyReLU activation.
+- Linear Layer 4: Input size 256, output size 1 with Sigmoid activation.
+
+These architectures are commonly used in GANs, where the Generator aims to generate realistic data samples, and the Discriminator tries to distinguish between real and fake data samples. The Generator and Discriminator are trained together in a adversarial manner to improve the quality of generated data.
+
 ## Forward Method
 
 The `forward` method defines the forward pass of the generator. It sequentially passes the input noise vector through the layers defined in the model architecture.
