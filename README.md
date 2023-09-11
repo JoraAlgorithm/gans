@@ -56,3 +56,7 @@ The code is dependent on the PyTorch deep learning framework.
 ## Hyperparameters
 
 Hyperparameters like learning rates, batch sizes, and the number of training epochs are not specified in the provided code and would need to be set based on the specific use case.
+
+[Link to Colab Notebook](https://colab.research.google.com/drive/1MpEq9WOSc8kXpiHoddm1nhuVMv2Ewebw?usp=sharing)
+
+
